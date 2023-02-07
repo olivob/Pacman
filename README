@@ -1,0 +1,15 @@
+README: Pacman
+
+DESIGN CHOICES: Welcome to my Pacman! I made a variety unique overall design choices. The general flowchart and structure of Pacman can be observed in my containment diagram 
+and interface diagram. I have implemented a collidable interface that is implemented by: Dots, Energizers, and Ghosts. This interface factors out common functionality between 
+these classes since they all implement the methods in slightly different ways. I have a method to collide with Pacman, a method to update the score, and a method that updates the game 
+over counter (this is primarily used by dots and energizers). The game ends when either Pacman loses all 3 of his lives, or all of the dots and energizers are eaten (this number
+is represented by 186). All of the ghosts chase Pacman or a position around Pacman during Chase mode using BFS, all ghosts target a unique position of the corner of the map using BFS 
+during Scatter, and during Frightened they chase a random target using BFS as well. The game models the requirements and takes all the recommendations given by the handout, including
+targets during Chase mode, and duration of the different modes. I chose the GhostPen to release ghosts every five seconds, and deemed this to be an appropriate length that is not 
+too easy nor is it too hard. I also chose to use the BoardCoordinate class for its error checking capabilities. Though it was not required, I decided to create a Wall class to factor
+out code that models the graphical components of the wall. This was done to de-clutter the code that generates the map!
+
+
+KNOWN BUGS: This has not happened in a long time, but sometimes the game had dropped some frames after prolonged use, but does not 
+disrupt or create any actual errors. 
